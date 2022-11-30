@@ -1,5 +1,8 @@
 <script lang="ts">
 	import kaceyGraduation from '$lib/images/kacey-at-graduation.webp';
+	import kaceyAward from '$lib/images/kacey-and-mr-johns.webp';
+	import programmingImg from '$lib/images/optimized-unsplash-programming-florian-olivo.jpg';
+	import headerBg from '$lib/images/mountain_6.jpg';
 	import svelteKitLogo from '$lib/assets/sveltekit-logo.svg';
 </script>
 
@@ -7,6 +10,18 @@
 	<title>Home</title>
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
+
+<header style={`--bg-image: url(${headerBg})`}>
+	<div class="header-content">
+		<div class="title">
+			<h1>Kacey Kniffen</h1>
+			<h2>Frontend Web Developer</h2>
+		</div>
+		<img src={kaceyAward} alt="" />
+	</div>
+</header>
+
+<h2 class="page-title">Who am I?</h2>
 
 <section class="content-grid">
 	<p class="paragraph para-left row-1">
@@ -20,7 +35,7 @@
 		Academy at Olathe Northwest High School. In eComm, I focused on furthering my passion in web
 		design.
 	</p>
-	<img class="img img-left row-2" src={kaceyGraduation} alt="Me and My family at my Graduation" />
+	<img class="img img-left row-2" src={programmingImg} alt="Me and My family at my Graduation" />
 	<p class="paragraph para-left row-3">
 		My name is Kacey Kniffen. I recently graduated, with an endorsement, from the eCommunication
 		Academy at Olathe Northwest High School. In eComm, I focused on furthering my passion in web
@@ -44,6 +59,7 @@
 		margin-top: 6rem;
 		margin-bottom: 8rem;
 		gap: 2em;
+		row-gap: 4em;
 		grid-template-columns: repeat(4, 1fr);
 		font-size: 20px;
 		.paragraph {
@@ -90,6 +106,8 @@
 			padding: 1em;
 			background-color: var(--blue-700);
 			border-radius: 0.5em;
+			box-shadow: 0px 15px 25px -16px rgb(0 0 0 / 0.25);
+
 			.svelte-link {
 				width: max-content;
 				transition: 125ms ease-in-out;
@@ -114,6 +132,74 @@
 		}
 	}
 
+	header {
+		background-image: var(--bg-image);
+		background-repeat: none;
+		background-size: cover;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2em;
+			background-color: var(--blue-900);
+		}
+	}
+
+	.header-content {
+		max-width: 100rem;
+		margin-inline: auto;
+		position: relative;
+		display: grid;
+		padding: 2.5% 5% 0;
+		grid-template-columns: repeat(3, 1fr);
+		align-items: center;
+		h1 {
+			padding: 0;
+			margin: 0;
+			font-size: 4rem;
+		}
+		h2 {
+			font-size: 1.25rem;
+			font-weight: 400;
+			margin: 0;
+		}
+		.title {
+			justify-self: end;
+			text-align: end;
+		}
+		img {
+			grid-column: span 2;
+		}
+	}
+
+	.page-title {
+		text-align: center;
+		margin: 4rem;
+		margin-top: 6rem;
+		font-size: 3.5rem;
+		font-weight: 600;
+	}
+
+	@media (max-width: 1536px) {
+		.header-content {
+			grid-template-columns: repeat(2, 1fr);
+			img {
+				grid-column: span 1;
+			}
+		}
+	}
+
+	@media (max-width: 1024px) {
+		.header-content {
+			grid-template-columns: 1fr;
+			.title {
+				justify-self: center;
+				text-align: center;
+				margin-top: 4rem;
+			}
+		}
+	}
+
 	@media (max-width: 768px) {
 		.content-grid {
 			grid-template-columns: 1fr;
@@ -126,6 +212,19 @@
 				grid-column: auto;
 				grid-row: auto;
 			}
+		}
+
+		.header-content {
+			h1 {
+				font-size: 3rem;
+			}
+			gap: 1rem;
+		}
+	}
+
+	@media (max-width: 640px) {
+		.header-content {
+			gap: 3rem;
 		}
 	}
 </style>

@@ -195,7 +195,7 @@
 		}
 	}
 
-	@media (min-width: 786px) {
+	@media (min-width: 768px) {
 		nav {
 			.dropdown {
 				display: none;

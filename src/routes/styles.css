@@ -45,3 +45,21 @@ a {
 ul {
 	padding-inline-start: 0;
 }
+
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: hsl(248, 19%, 60%);
+	border-radius: 10px 0px 0px 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background-color: hsl(248, 19%, 70%);
+}
+
+* {
+	scrollbar-color: hsl(248, 19%, 60%) var(--medium-dark-blue);
+	scrollbar-width: thin;
+}
