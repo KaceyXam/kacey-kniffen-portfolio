@@ -29,6 +29,14 @@ body {
 	background-color: var(--blue-800);
 }
 
+img,
+picture,
+svg,
+video {
+	display: block;
+	max-width: 100%;
+}
+
 a {
 	color: inherit;
 	text-decoration: none;
