@@ -1,0 +1,39 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:root {
+	--font-body: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', monospace;
+	font-family: var(--font-body);
+	color: white;
+
+	font-size: 18px;
+
+	--blue-100: hsl(248, 19%, 80%);
+	--blue-200: hsl(248, 19%, 70%);
+	--blue-400: hsl(248, 19%, 55%);
+	--blue-600: hsl(249, 20%, 35%);
+	--blue-700: hsl(249, 20%, 25%);
+	--blue-800: hsl(249, 20%, 14%);
+	--blue-900: hsl(248, 17%, 9%);
+}
+
+body {
+	min-height: 100vh;
+	margin: 0;
+
+	background-color: var(--blue-800);
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+ul {
+	padding-inline-start: 0;
+}
