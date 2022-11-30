@@ -4,7 +4,7 @@
 
 	import favicon from '$lib/assets/favicon.png';
 
-	let pagePath = $page.url.pathname;
+	$: pagePath = $page.url.pathname;
 	let showNav = false;
 
 	let screenWidth: number;

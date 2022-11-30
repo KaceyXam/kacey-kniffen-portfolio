@@ -103,14 +103,14 @@
 			align-items: center;
 			text-align: center;
 			gap: 1em;
-			padding: 1em;
+			padding: 1em 1em 2em;
 			background-color: var(--blue-700);
 			border-radius: 0.5em;
 			box-shadow: 0px 15px 25px -16px rgb(0 0 0 / 0.25);
 
 			.svelte-link {
 				width: max-content;
-				transition: 125ms ease-in-out;
+				transition: 75ms ease-in-out;
 				cursor: pointer;
 				padding: 1em;
 				border-radius: 8px;
