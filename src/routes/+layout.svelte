@@ -2,8 +2,6 @@
 	import { page } from '$app/stores';
 	import './styles.css';
 
-	import favicon from '$lib/assets/favicon.png';
-
 	$: pagePath = $page.url.pathname;
 	let showNav = false;
 
@@ -37,7 +35,7 @@
 		href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
 		rel="stylesheet"
 	/>
-	<link rel="shortcut icon" href={favicon} type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
 </svelte:head>
 
 <svelte:window bind:innerWidth={screenWidth} bind:scrollY on:scroll={watchScroll} />

@@ -36,7 +36,7 @@
 	<title>Kacey Kniffen | Contact Me</title>
 </svelte:head>
 
-<PageTitle title="Contact Me" bgImg={mountain2} bgImgAlt="Mountain Image from" />
+<PageTitle title="Contact Me" bgImg={mountain2} bgImgAlt="Mountain Image from Unsplash" />
 
 <h3>If you have any questions, feel free to ask me.</h3>
 
