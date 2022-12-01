@@ -7,8 +7,8 @@
 </script>
 
 <svelte:head>
-	<title>Home</title>
-	<meta name="description" content="Svelte demo app" />
+	<title>Kacey Kniffen | Home</title>
+	<meta name="description" content="Kacey Kniffen Portfolio" />
 </svelte:head>
 
 <header style={`--bg-image: url(${headerBg})`}>

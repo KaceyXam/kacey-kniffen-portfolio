@@ -21,7 +21,7 @@
 	header {
 		overflow-y: hidden;
 		position: relative;
-		height: clamp(30rem, 40vh, 50rem);
+		height: clamp(35rem, 40vh, 50rem);
 		display: grid;
 		place-content: center;
 		.bg-image {
@@ -32,6 +32,7 @@
 			object-fit: cover;
 			height: 100%;
 			clip-path: polygon(0 0, 100% 0, 100% 30%, 0% 90%);
+			filter: blur(2px);
 		}
 		h1,
 		.over,

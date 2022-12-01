@@ -11,7 +11,7 @@
 	font-family: var(--font-body);
 	color: white;
 
-	font-size: 18px;
+	font-size: 20px;
 
 	--blue-100: hsl(248, 19%, 80%);
 	--blue-200: hsl(248, 19%, 70%);
@@ -20,6 +20,8 @@
 	--blue-700: hsl(249, 20%, 25%);
 	--blue-800: hsl(249, 20%, 14%);
 	--blue-900: hsl(248, 17%, 9%);
+
+	--link: hsl(190, 96%, 70%);
 }
 
 body {
@@ -27,6 +29,13 @@ body {
 	margin: 0;
 
 	background-color: var(--blue-800);
+}
+
+input,
+textarea,
+button,
+select {
+	font: inherit;
 }
 
 img,
@@ -60,6 +69,6 @@ ul {
 }
 
 * {
-	scrollbar-color: hsl(248, 19%, 60%) var(--medium-dark-blue);
+	scrollbar-color: hsl(248, 19%, 60%) var(--blue-600);
 	scrollbar-width: thin;
 }

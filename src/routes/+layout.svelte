@@ -140,6 +140,7 @@
 		align-items: center;
 		background-color: var(--blue-900);
 		position: sticky;
+		width: 100%;
 		top: 0;
 		z-index: 99;
 		box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.384);
