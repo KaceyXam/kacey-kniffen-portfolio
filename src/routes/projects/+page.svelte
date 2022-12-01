@@ -2,7 +2,7 @@
 	import PageTitle from '../PageTitle.svelte';
 	import Project from './Project.svelte';
 
-	import mountain6 from '$lib/images/mountain_6.jpg';
+	import mountain3 from '$lib/images/mountain_4.webp';
 
 	import svelteHangman from '$lib/images/project-imgs/svelte-hangman.png';
 	import articleCard from '$lib/images/project-imgs/article-card.png';
@@ -15,7 +15,7 @@
 	<title>Kacey Kniffen | Projects</title>
 </svelte:head>
 
-<PageTitle title="Projects" bgImg={mountain6} bgImgAlt="Mountain Image from unsplash" />
+<PageTitle title="Projects" bgImg={mountain3} bgImgAlt="Mountain Image from unsplash" />
 
 <ul class="projects-list">
 	<Project

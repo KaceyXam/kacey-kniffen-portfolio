@@ -1,7 +1,7 @@
 <script lang="ts">
 	import PageTitle from '../PageTitle.svelte';
 
-	import mountain6 from '$lib/images/mountain_6.jpg';
+	import mountain2 from '$lib/images/mountain_2.webp';
 	let name: string;
 	let email: string;
 	let message: string;
@@ -36,7 +36,9 @@
 	<title>Kacey Kniffen | Contact Me</title>
 </svelte:head>
 
-<PageTitle title="Contact Me" bgImg={mountain6} bgImgAlt="Mountain Image from" />
+<PageTitle title="Contact Me" bgImg={mountain2} bgImgAlt="Mountain Image from" />
+
+<h3>If you have any questions, feel free to ask me.</h3>
 
 <form method="post" on:submit|preventDefault={handleSubmit}>
 	{#if formSubmit}
@@ -79,6 +81,13 @@
 </form>
 
 <style lang="scss">
+	h3 {
+		text-align: center;
+		font-weight: 400;
+		margin-bottom: 2rem;
+		font-size: 1.4rem;
+	}
+
 	form {
 		max-width: 1024px;
 		display: grid;
