@@ -43,6 +43,7 @@
 			font-weight: 600;
 			margin: 0;
 			top: 2rem;
+			text-align: center;
 		}
 		h1 {
 			opacity: 60%;

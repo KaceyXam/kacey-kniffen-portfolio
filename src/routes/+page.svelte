@@ -235,6 +235,10 @@
 				margin-top: 4rem;
 			}
 		}
+
+		.page-title {
+			font-size: 3rem !important;
+		}
 	}
 
 	@media (max-width: 768px) {
@@ -256,6 +260,10 @@
 				font-size: 3rem;
 			}
 			gap: 1rem;
+		}
+
+		.page-title {
+			font-size: 2rem !important;
 		}
 	}
 
