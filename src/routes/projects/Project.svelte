@@ -7,12 +7,12 @@
 
 <li>
 	<div class="top">
-		<a href={link} class="project-link">
+		<a href={link} class="project-link" target="_blank" rel="noreferrer">
 			<slot name="title">
 				<span>Title Not Provided</span>
 			</slot>
 		</a>
-		<a href={linkGithub}>
+		<a href={linkGithub} target="_blank" rel="noreferrer">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 30 30">
 				<path
 					fill-rule="evenodd"
