@@ -61,11 +61,22 @@
 			h1,
 			.over,
 			.under {
-				font-size: 4rem;
+				font-size: 6rem;
 			}
 		}
 	}
 	@media (max-width: 768px) {
+		header {
+			height: 20rem;
+			h1,
+			.over,
+			.under {
+				font-size: 4rem;
+			}
+		}
+	}
+
+	@media (max-width: 400px) {
 		header {
 			h1,
 			.over,

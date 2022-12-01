@@ -1,4 +1,6 @@
 <script lang="ts">
+	const apiKey = import.meta.env.VITE_STATIC_FORMS_API_KEY;
+
 	import PageTitle from '../PageTitle.svelte';
 
 	import mountain2 from '$lib/images/mountain_2.webp';
@@ -12,7 +14,7 @@
 		name,
 		email,
 		message,
-		accessKey: 'dda2490d-3ce6-4e5d-ac82-f34e9b2be530'
+		accessKey: apiKey
 	};
 
 	async function handleSubmit() {
@@ -174,6 +176,7 @@
 		form {
 			grid-template-columns: 1fr;
 			margin-inline: 2.5%;
+			font-size: 16px;
 			.input-element {
 				grid-column: 1;
 				margin: 0;
@@ -182,10 +185,11 @@
 			input[type='submit'] {
 				grid-row: auto;
 				grid-column: auto;
+				font-size: inherit;
 			}
 			textarea {
-				width: 100%;
 				margin: 0;
+				width: 96%;
 			}
 		}
 	}
