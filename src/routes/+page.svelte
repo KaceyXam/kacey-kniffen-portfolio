@@ -192,14 +192,15 @@
 		align-items: center;
 		justify-content: center;
 		margin: 0;
+		margin: 2rem;
+		margin-top: 6rem;
 		.page-title {
 			display: flex;
 			align-items: center;
 			justify-items: center;
 			text-align: center;
 			width: max-content;
-			margin: 2rem;
-			margin-top: 6rem;
+
 			font-size: 3.5rem;
 			font-weight: 600;
 			position: relative;
@@ -246,6 +247,8 @@
 			grid-template-columns: 1fr;
 			margin-inline: 2.5%;
 			gap: 1em;
+			margin-top: 2rem;
+			margin-bottom: 4rem;
 			.paragraph,
 			.img,
 			.built-with {
@@ -262,8 +265,12 @@
 			gap: 1rem;
 		}
 
-		.page-title {
-			font-size: 2rem !important;
+		.page-title__wrapper {
+			margin: 0;
+			margin-top: 4rem;
+			.page-title {
+				font-size: 2rem !important;
+			}
 		}
 	}
 
