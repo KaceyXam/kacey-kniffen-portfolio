@@ -51,7 +51,7 @@
 				<rect class="bottom line" width="80" height="10" x="10" y="70" rx="5" />
 			</svg>
 		</button>
-		<ul class:hidden={!showNav && screenWidth <= 786} class="page-links">
+		<ul class:hidden={!showNav && screenWidth <= 768} class="page-links">
 			<li><a class:active={pagePath === '/'} href="/">Home</a></li>
 			<li><a class:active={pagePath === '/projects'} href="/projects">Projects</a></li>
 			<li><a class:active={pagePath === '/contact'} href="/contact">Contact</a></li>
@@ -127,7 +127,13 @@
 			</li>
 		</ul>
 		<div class="copyright">
-			Copyright 2022 Kacey Kniffen | Designed and Developed by Kacey Kniffen
+			Copyright 2022 Kacey Kniffen
+			{#if screenWidth <= 768}
+				<br />
+			{:else}
+				|
+			{/if}
+			Designed and Developed by Kacey Kniffen
 		</div>
 	</footer>
 </div>
@@ -229,6 +235,7 @@
 		align-items: center;
 		padding-block: 2em;
 		background-color: var(--blue-900);
+		text-align: center;
 		.link-icons {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);

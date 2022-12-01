@@ -92,4 +92,24 @@
 			}
 		}
 	}
+
+	@media (max-width: 768px) {
+		li {
+			grid-template-columns: 1fr;
+			.top {
+				grid-column: 1 / -1;
+			}
+			p {
+				grid-column: 1 / -1;
+			}
+			&:hover {
+				scale: 100%;
+			}
+			img {
+				width: 475px;
+				align-self: center;
+				justify-self: center;
+			}
+		}
+	}
 </style>

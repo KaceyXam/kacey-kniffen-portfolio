@@ -56,4 +56,23 @@
 			z-index: -999;
 		}
 	}
+
+	@media (max-width: 1024px) {
+		header {
+			h1,
+			.over,
+			.under {
+				font-size: 4rem;
+			}
+		}
+	}
+	@media (max-width: 768px) {
+		header {
+			h1,
+			.over,
+			.under {
+				font-size: 3rem;
+			}
+		}
+	}
 </style>

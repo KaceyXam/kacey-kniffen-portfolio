@@ -88,11 +88,19 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
-		max-width: 1024px;
+		max-width: 1280px;
 		margin-inline: auto;
+		padding-inline: 5%;
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
 		margin-bottom: 4rem;
+	}
+
+	@media (max-width: 768px) {
+		ul {
+			margin-inline: 5%;
+			padding-inline: 0;
+		}
 	}
 </style>

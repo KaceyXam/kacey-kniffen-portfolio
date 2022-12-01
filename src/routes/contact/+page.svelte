@@ -39,6 +39,9 @@
 <PageTitle title="Contact Me" bgImg={mountain6} bgImgAlt="Mountain Image from" />
 
 <form method="post" on:submit|preventDefault={handleSubmit}>
+	{#if formSubmit}
+		<div class="message-sent">Message has been sent!</div>
+	{/if}
 	<div class="input-element">
 		<label for="name">Name:</label>
 		<input
@@ -87,6 +90,11 @@
 		border-radius: 10px;
 		margin-bottom: 6rem;
 		box-shadow: 0 25px 50px -8px rgb(0 0 0 / 0.25);
+		.message-sent {
+			grid-column: span 2;
+			text-align: center;
+		}
+
 		label {
 			padding: 0;
 			margin: 0;
@@ -151,6 +159,25 @@
 		input[type='submit']:disabled:hover {
 			color: var(--blue-100);
 			border-color: var(--blue-100);
+		}
+	}
+	@media (max-width: 768px) {
+		form {
+			grid-template-columns: 1fr;
+			margin-inline: 2.5%;
+			.input-element {
+				grid-column: 1;
+				margin: 0;
+				padding: 0;
+			}
+			input[type='submit'] {
+				grid-row: auto;
+				grid-column: auto;
+			}
+			textarea {
+				width: 100%;
+				margin: 0;
+			}
 		}
 	}
 </style>

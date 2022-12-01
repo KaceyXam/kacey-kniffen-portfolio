@@ -37,9 +37,15 @@
 	</p>
 	<img class="img img-left row-2" src={programmingImg} alt="Me and My family at my Graduation" />
 	<p class="paragraph para-left row-3">
-		My name is Kacey Kniffen. I recently graduated, with an endorsement, from the eCommunication
-		Academy at Olathe Northwest High School. In eComm, I focused on furthering my passion in web
-		design.
+		I built this site to have a place to show off my work. I like working with newer and less used
+		frameworks, like
+		<a href="https://www.solidjs.com/" target="_blank" rel="noreferrer" class="framework-link">
+			SolidJs
+		</a>
+		and
+		<a href="https://www.svelte.dev" target="_blank" rel="noreferrer" class="framework-link">
+			Svelte
+		</a>, because I like problem solving.
 	</p>
 	<img class="img img-right row-3" src={kaceyGraduation} alt="Me and My family at my Graduation" />
 	<div class="built-with">
@@ -62,6 +68,12 @@
 		row-gap: 4em;
 		grid-template-columns: repeat(4, 1fr);
 		font-size: 20px;
+
+		.framework-link {
+			text-decoration: underline;
+			color: var(--link);
+		}
+
 		.paragraph {
 			z-index: 1;
 			padding: 1em;
