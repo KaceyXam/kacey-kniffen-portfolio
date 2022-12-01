@@ -1,9 +1,11 @@
 <script lang="ts">
-	import kaceyGraduation from '$lib/images/kacey-at-graduation.webp';
-	import kaceyAward from '$lib/images/kacey-and-mr-johns.webp';
 	import programmingImg from '$lib/images/optimized-unsplash-programming-florian-olivo.jpg';
 	import headerBg from '$lib/images/mountain_6.jpg';
 	import svelteKitLogo from '$lib/assets/sveltekit-logo.svg';
+
+	import kaceyGraduation from '$lib/images/kacey-at-graduation.webp';
+	import kaceyAward from '$lib/images/kacey-and-mr-johns.webp';
+	import kaceyPlay from '$lib/images/kacey-in-the-play.webp';
 </script>
 
 <svelte:head>
@@ -21,7 +23,9 @@
 	</div>
 </header>
 
-<h2 class="page-title">Who am I?</h2>
+<div class="page-title__wrapper">
+	<h2 class="page-title">Who am I?</h2>
+</div>
 
 <section class="content-grid">
 	<p class="paragraph para-left row-1">
@@ -31,11 +35,10 @@
 	</p>
 	<img class="img img-right row-1" src={kaceyGraduation} alt="Me and My family at my Graduation" />
 	<p class="paragraph para-right row-2">
-		My name is Kacey Kniffen. I recently graduated, with an endorsement, from the eCommunication
-		Academy at Olathe Northwest High School. In eComm, I focused on furthering my passion in web
-		design.
+		In High School, I was involved with theatre. Most of my time was spent on stage crew, but in my
+		Senior Year, I had one of the lead roles in our spring play, Murder on the Orient Express.
 	</p>
-	<img class="img img-left row-2" src={programmingImg} alt="Me and My family at my Graduation" />
+	<img class="img img-left row-2" src={kaceyPlay} alt="Me and My family at my Graduation" />
 	<p class="paragraph para-left row-3">
 		I built this site to have a place to show off my work. I like working with newer and less used
 		frameworks, like
@@ -44,10 +47,10 @@
 		</a>
 		and
 		<a href="https://www.svelte.dev" target="_blank" rel="noreferrer" class="framework-link">
-			Svelte
-		</a>, because I like problem solving.
+			Svelte<span style="color: white; text-decoration: none">,</span>
+		</a> because I like seeing where JavaScript development is going.
 	</p>
-	<img class="img img-right row-3" src={kaceyGraduation} alt="Me and My family at my Graduation" />
+	<img class="img img-right row-3" src={programmingImg} alt="Me and My family at my Graduation" />
 	<div class="built-with">
 		<h3 class="built-title">This site was built with<br />SvelteKit</h3>
 		<a href="https://kit.svelte.dev/" target="_blank" rel="noreferrer" class="svelte-link">
@@ -184,12 +187,34 @@
 		}
 	}
 
-	.page-title {
-		text-align: center;
-		margin: 4rem;
-		margin-top: 6rem;
-		font-size: 3.5rem;
-		font-weight: 600;
+	.page-title__wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 0;
+		.page-title {
+			display: flex;
+			align-items: center;
+			justify-items: center;
+			text-align: center;
+			width: max-content;
+			margin: 2rem;
+			margin-top: 6rem;
+			font-size: 3.5rem;
+			font-weight: 600;
+			position: relative;
+			&::after {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 0.1em;
+				top: 100%;
+				margin: 0%;
+				padding: 0%;
+				border-radius: 999vh;
+				background-color: var(--blue-100);
+			}
+		}
 	}
 
 	@media (max-width: 1536px) {

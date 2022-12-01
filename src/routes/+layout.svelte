@@ -13,6 +13,21 @@
 	function toggleNav() {
 		showNav = !showNav;
 	}
+
+	let width = 0;
+
+	const watchScroll = () => {
+		const { scrollHeight, clientHeight, scrollTop } = document.documentElement;
+		const winScroll = document.body.scrollTop || scrollTop;
+		const winHeight = scrollHeight - clientHeight;
+
+		const scrolled = (winScroll / winHeight) * 100;
+		if (winHeight > 0) {
+			width = scrolled;
+		} else {
+			width = 0;
+		}
+	};
 </script>
 
 <svelte:head>
@@ -25,7 +40,7 @@
 	<link rel="shortcut icon" href={favicon} type="image/x-icon" />
 </svelte:head>
 
-<svelte:window bind:innerWidth={screenWidth} bind:scrollY />
+<svelte:window bind:innerWidth={screenWidth} bind:scrollY on:scroll={watchScroll} />
 
 <div class="app">
 	<nav>
@@ -57,6 +72,7 @@
 			<li><a class:active={pagePath === '/contact'} href="/contact">Contact</a></li>
 		</ul>
 	</nav>
+	<div class="scroll-progress" style={`--progress-width: ${width}%`} />
 
 	<main>
 		<slot />
@@ -193,6 +209,23 @@
 					color: white;
 				}
 			}
+		}
+	}
+	.scroll-progress {
+		position: fixed;
+		width: 100%;
+		height: 4px;
+		background: var(--blue-900);
+		top: 0;
+		z-index: 99;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 0;
+			background-color: var(--blue-400);
+			height: 4px;
+			width: var(--progress-width);
 		}
 	}
 
