@@ -21,6 +21,61 @@
 	<Project
 		projectImg={svelteHangman}
 		title="Svelte Hangman Game Screenshot"
+		linkGithub="https://github.com/KaceyXam/solidjs-fireshipio-recreation"
+		link="https://solidjs-fireshipio-recreation.pages.dev"
+	>
+		<span slot="title">Fireship.io site recreation</span>
+		<span slot="description">
+			In this project, I remade the home page of fireship.io. I decided to recreate fireship.io
+			because all of the source code is open source, so if I wanted to know how he did anything, I
+			could see.
+		</span>
+	</Project>
+
+	<Project
+		projectImg={svelteHangman}
+		title="Svelte Hangman Game Screenshot"
+		linkGithub="https://github.com/KaceyXam/svelte-tic-tac-toe"
+		link="https://svelte-tic-tac-toe.pages.dev/"
+	>
+		<span slot="title">Tic Tac Toe</span>
+		<span slot="description">
+			This is a simple version of Tic Tac Toe I made using Svelte. I decided to make this project
+			because Tic Tac Toe is a very simple game, and I wanted to see if I could recreate it on my
+			own.
+		</span>
+	</Project>
+
+	<Project
+		projectImg={svelteHangman}
+		title="Svelte Hangman Game Screenshot"
+		linkGithub="https://github.com/KaceyXam/intro-section-responsive-nav"
+		link="https://8bd82b44.intro-section-responsive-nav.pages.dev/"
+	>
+		<span slot="title">Responsive Intro Section</span>
+		<span slot="description">
+			This is a Frontend Mentor project that i completed using React js. The goal of the project was
+			to make a responsive intro section with a dropdown navigation menu.
+		</span>
+	</Project>
+
+	<Project
+		projectImg={svelteHangman}
+		title="Svelte Hangman Game Screenshot"
+		linkGithub="https://github.com/KaceyXam/time-tracking-dashboard"
+		link="https://clever-kulfi-1f769c.netlify.app/"
+	>
+		<span slot="title">Time Tracking Dashboard</span>
+		<span slot="description">
+			This is a Frontend Mentor project that I completed using Vue. This project involved me
+			creating a dashboard with data gathered from a JSON file. You can also chose to display daily,
+			weekly, or monthly data.
+		</span>
+	</Project>
+
+	<Project
+		projectImg={svelteHangman}
+		title="Svelte Hangman Game Screenshot"
 		linkGithub="https://github.com/KaceyXam/svelte-hangman"
 		link="https://delightful-chaja-3a120d.netlify.app/"
 	>
