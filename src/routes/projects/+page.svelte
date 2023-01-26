@@ -9,6 +9,10 @@
 	import adviceGenerator from '$lib/images/project-imgs/advice-generator.png';
 	import signupForm from '$lib/images/project-imgs/signup-form-frontend.png';
 	import ratingComponent from '$lib/images/project-imgs/rating-component.png';
+	import fireshipIo from '$lib/images/project-imgs/fireship-io.png';
+	import ticTacToe from '$lib/images/project-imgs/tic-tac-toe.png';
+	import responsiveNav from '$lib/images/project-imgs/responsive-nav-bar.png';
+	import timeDashboard from '$lib/images/project-imgs/time-dashboard.png';
 </script>
 
 <svelte:head>
@@ -19,7 +23,7 @@
 
 <ul class="projects-list">
 	<Project
-		projectImg={svelteHangman}
+		projectImg={fireshipIo}
 		title="Svelte Hangman Game Screenshot"
 		linkGithub="https://github.com/KaceyXam/solidjs-fireshipio-recreation"
 		link="https://solidjs-fireshipio-recreation.pages.dev"
@@ -33,7 +37,7 @@
 	</Project>
 
 	<Project
-		projectImg={svelteHangman}
+		projectImg={ticTacToe}
 		title="Svelte Hangman Game Screenshot"
 		linkGithub="https://github.com/KaceyXam/svelte-tic-tac-toe"
 		link="https://svelte-tic-tac-toe.pages.dev/"
@@ -47,7 +51,7 @@
 	</Project>
 
 	<Project
-		projectImg={svelteHangman}
+		projectImg={responsiveNav}
 		title="Svelte Hangman Game Screenshot"
 		linkGithub="https://github.com/KaceyXam/intro-section-responsive-nav"
 		link="https://8bd82b44.intro-section-responsive-nav.pages.dev/"
@@ -60,7 +64,7 @@
 	</Project>
 
 	<Project
-		projectImg={svelteHangman}
+		projectImg={timeDashboard}
 		title="Svelte Hangman Game Screenshot"
 		linkGithub="https://github.com/KaceyXam/time-tracking-dashboard"
 		link="https://clever-kulfi-1f769c.netlify.app/"
