@@ -13,5 +13,8 @@
     "@astrojs/solid-js": "^2.0.2",
     "astro": "^2.0.17",
     "solid-js": "^1.4.3"
+  },
+  "devDependencies": {
+    "sass": "^1.58.3"
   }
 }
