@@ -1,24 +1,22 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/solid-js": "^2.0.2",
-    "@babel/core": "^7.21.0",
-    "@storyblok/astro": "^2.0.10",
-    "@storyblok/js": "^2.1.0",
-    "astro": "^2.0.17",
-    "dotenv": "^16.0.3",
-    "solid-js": "^1.4.3"
-  },
-  "devDependencies": {
-    "sass": "^1.58.3"
-  }
+	"name": "kacey-kniffen-portfolio",
+	"type": "module",
+	"version": "0.0.1",
+	"scripts": {
+		"dev": "astro dev",
+		"start": "astro dev",
+		"build": "astro build",
+		"preview": "astro preview",
+		"astro": "astro"
+	},
+	"dependencies": {
+		"@astrojs/solid-js": "^2.0.2",
+		"@babel/core": "^7.21.0",
+		"astro": "^2.0.17",
+		"dotenv": "^16.0.3",
+		"solid-js": "^1.4.3"
+	},
+	"devDependencies": {
+		"sass": "^1.58.3"
+	}
 }
