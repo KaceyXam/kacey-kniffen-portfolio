@@ -54,7 +54,7 @@ import technologySvg from "../images/technology-svg.svg";
 		gap: 10rem;
 		align-items: center;
 		justify-content: center;
-		padding-block: 10em 6em;
+		padding-block: 6em;
 		background: linear-gradient(
 			to top,
 			var(--gradient-color),
@@ -65,23 +65,24 @@ import technologySvg from "../images/technology-svg.svg";
 	.rotate-wrapper {
 		&,
 		& * {
-			transition: all 75ms ease-in-out;
+			transition: all 125ms ease-in-out;
 		}
 		position: relative;
 		&:hover {
 			scale: 1.1;
 			.img-wrapper img {
 				scale: 1.2;
-				bottom: 10px;
+				bottom: 0.75rem;
 			}
 		}
 	}
 
 	.rotate-svg {
+		width: 100%;
+		scale: 1.17;
 		position: absolute;
 		bottom: 0;
-		scale: 1.2;
-		animation: rotation 160s linear infinite;
+		inset-inline: 0;
 	}
 
 	.img-wrapper {
@@ -106,6 +107,17 @@ import technologySvg from "../images/technology-svg.svg";
 			width: 80%;
 			left: 50%;
 			translate: -50%;
+			transition: 175ms ease-in-out;
+		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.rotate-svg {
+			animation: rotation 160s linear infinite;
+		}
+
+		.rotate-wrapper:hover {
+			animation: bob 5s infinite ease-in-out;
 		}
 	}
 
@@ -115,6 +127,18 @@ import technologySvg from "../images/technology-svg.svg";
 		}
 		100% {
 			rotate: 360deg;
+		}
+	}
+
+	@keyframes bob {
+		0% {
+			translate: 0 0rem;
+		}
+		50% {
+			translate: 0 -1rem;
+		}
+		100% {
+			translate: 0 0rem;
 		}
 	}
 </style>

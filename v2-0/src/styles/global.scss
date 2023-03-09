@@ -5,6 +5,9 @@
 	--accent-color-transparent: hsla(158, 95%, 43%, 0.5);
 
 	--gradient-color: hsl(158, 95%, 43%, 10%);
+
+	--bg-color: #202020;
+	--footer-color: #1c1c1c;
 }
 
 /* css reset */
@@ -32,6 +35,7 @@ video {
 /* end css reset */
 html {
 	color-scheme: dark;
-	background-color: #121212;
+	background-color: var(--bg-color);
 	overflow-x: hidden;
+	scroll-behavior: smooth;
 }

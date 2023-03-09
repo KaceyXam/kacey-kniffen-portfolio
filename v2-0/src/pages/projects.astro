@@ -2,10 +2,13 @@
 import { SolidCounter } from "../components/Counter";
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <GlobalLayout>
-    <Navbar />
-    <h1>Projects</h1>
-    <SolidCounter client:load />
-</GlobalLayout>    
+	<Navbar />
+	<h1>Projects</h1>
+	<SolidCounter client:load />
+	<Footer />
+</GlobalLayout>
+
