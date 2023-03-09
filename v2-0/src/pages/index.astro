@@ -4,6 +4,7 @@ import GlobalLayout from "../layouts/GlobalLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import HeroSection from "../sections/HeroSection.astro";
 import Footer from "../components/Footer.astro";
+import ContactForm from "../sections/ContactForm.astro";
 ---
 
 <GlobalLayout>
@@ -12,6 +13,7 @@ import Footer from "../components/Footer.astro";
 	<main>
 		<h1>Astro</h1>
 		<SolidCounter client:load />
+		<ContactForm />
 	</main>
 	<Footer />
 </GlobalLayout>
