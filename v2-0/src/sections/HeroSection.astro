@@ -1,5 +1,6 @@
 ---
-import Image from "astro";
+import kaceyProfessionalImg from "../images/kacey-professional.png";
+import technologySvg from "../images/technology-svg.svg";
 ---
 
 <header>
@@ -12,7 +13,16 @@ import Image from "astro";
 		</p>
 		<a href="/projects">View my projects</a>
 	</section>
-	<div></div>
+	<div class="rotate-wrapper">
+		<img class="rotate-svg" src={technologySvg} alt="" />
+		<div class="img-wrapper">
+			<div class="circle-border"></div>
+			<img
+				src={kaceyProfessionalImg}
+				alt="Kacey Kniffen with his Graduation Cap"
+			/>
+		</div>
+	</div>
 </header>
 
 <svg viewBox="0 0 1440 73" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -41,6 +51,7 @@ import Image from "astro";
 
 	header {
 		display: flex;
+		gap: 10rem;
 		align-items: center;
 		justify-content: center;
 		padding-block: 10em 6em;
@@ -49,5 +60,61 @@ import Image from "astro";
 			var(--gradient-color),
 			hsla(0, 0%, 0%, 0%)
 		);
+	}
+
+	.rotate-wrapper {
+		&,
+		& * {
+			transition: all 75ms ease-in-out;
+		}
+		position: relative;
+		&:hover {
+			scale: 1.1;
+			.img-wrapper img {
+				scale: 1.2;
+				bottom: 10px;
+			}
+		}
+	}
+
+	.rotate-svg {
+		position: absolute;
+		bottom: 0;
+		scale: 1.2;
+		animation: rotation 160s linear infinite;
+	}
+
+	.img-wrapper {
+		position: relative;
+		aspect-ratio: 1 / 1.125;
+		width: 500px;
+		border-radius: 0 0 999vmax 999vmax;
+		overflow: hidden;
+		* {
+			bottom: 0;
+		}
+		.circle-border {
+			position: absolute;
+			width: 100%;
+			border-radius: 999vmax;
+			background-color: var(--accent-color);
+			aspect-ratio: 1 / 1;
+		}
+		img {
+			bottom: -25px;
+			position: absolute;
+			width: 80%;
+			left: 50%;
+			translate: -50%;
+		}
+	}
+
+	@keyframes rotation {
+		0% {
+			rotate: 0deg;
+		}
+		100% {
+			rotate: 360deg;
+		}
 	}
 </style>
