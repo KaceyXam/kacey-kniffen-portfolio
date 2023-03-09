@@ -2,6 +2,7 @@
 const pathname = new URL(Astro.request.url).pathname;
 
 import KaceyKniffenSvg from "../images/svg/KaceyKniffenLogo.astro";
+import GitHubSvg from "../images/svg/GitHubSvg.astro";
 ---
 
 <nav>
@@ -17,13 +18,13 @@ import KaceyKniffenSvg from "../images/svg/KaceyKniffenLogo.astro";
 		</li>
 		<li>
 			<a href="https://github.com/KaceyXam" target="_blank" rel="noreferrer">
-				GitHub
+				<GitHubSvg />
 			</a>
 		</li>
 	</ul>
 </nav>
 
-<style lang="scss" scoped>
+<style lang="scss">
 	nav {
 		display: flex;
 		width: 100%;
@@ -33,6 +34,7 @@ import KaceyKniffenSvg from "../images/svg/KaceyKniffenLogo.astro";
 		padding-block: 0.5em;
 		ul {
 			display: flex;
+			align-items: center;
 			list-style: none;
 			gap: 1em;
 			li {
