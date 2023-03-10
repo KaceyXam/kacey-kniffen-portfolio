@@ -1,13 +1,15 @@
 :root {
 	font-family: "Ubuntu", sans-serif;
 
-	--accent-color: #05d58a;
+	--accent-color: hsl(158, 95%, 43%);
+	--accent-color-light: hsl(158, 100%, 73%);
 	--accent-color-transparent: hsla(158, 95%, 43%, 0.5);
+	--accent-color-dark: hsl(157, 40%, 25%);
 
 	--gradient-color: hsl(158, 95%, 43%, 10%);
 
-	--bg-color: #202020;
-	--bg-dark-color: #1c1c1c;
+	--bg-color: hsl(0, 0%, 13%);
+	--bg-dark-color: hsl(0, 0%, 11%);
 }
 
 /* css reset */
@@ -30,6 +32,10 @@ svg,
 video {
 	display: block;
 	max-width: 100%;
+}
+
+button {
+	cursor: pointer;
 }
 
 /* end css reset */
