@@ -10,6 +10,12 @@
 
 	--bg-color: hsl(0, 0%, 13%);
 	--bg-dark-color: hsl(0, 0%, 11%);
+
+	--header-gradient: linear-gradient(
+		to top,
+		var(--gradient-color),
+		hsla(0, 0%, 0%, 0%)
+	);
 }
 
 /* css reset */
