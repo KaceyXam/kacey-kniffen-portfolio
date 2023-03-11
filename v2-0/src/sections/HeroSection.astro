@@ -5,14 +5,17 @@ import technologySvg from "../images/technology-svg.svg";
 ---
 
 <header>
-	<section>
+	<section class="header-content">
 		<h1>Kacey Kniffen</h1>
 		<p>
 			I’m a self-taught Freelance Web Developer who enjoys building websites and
 			experimenting with modern languages and frameworks, such as Solid Js and
 			Astro, which I used to build this site.
 		</p>
-		<a href="/projects">View my projects</a>
+		<a href="/projects">
+			View my projects
+			<i class="fa-solid fa-arrow-up-right-from-square"></i>
+		</a>
 	</section>
 	<div class="rotate-wrapper">
 		<img class="rotate-svg" src={technologySvg} alt="" />
@@ -25,24 +28,30 @@ import technologySvg from "../images/technology-svg.svg";
 		</div>
 	</div>
 </header>
+
 <WaveSvg />
 
 <style lang="scss" scoped>
-	h1 {
-		font-size: 72px;
-		font-weight: bold;
-		color: var(--accent-color);
-	}
+	.header-content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5em;
+		h1 {
+			color: var(--accent-color);
+		}
 
-	p {
-		max-width: 55ch;
-		font-size: 18px;
-	}
+		p {
+			max-width: 55ch;
+			font-size: 18px;
+			line-height: 1.5;
+		}
 
-	a {
-		color: var(--accent-color);
-		text-decoration: none;
-		font-size: 20px;
+		a {
+			color: var(--accent-color);
+			text-decoration: none;
+			font-size: 20px;
+		}
 	}
 
 	header {
@@ -51,11 +60,7 @@ import technologySvg from "../images/technology-svg.svg";
 		align-items: center;
 		justify-content: center;
 		padding-block: 6em;
-		background: linear-gradient(
-			to top,
-			var(--gradient-color),
-			hsla(0, 0%, 0%, 0%)
-		);
+		background: var(--header-gradient);
 	}
 
 	.rotate-wrapper {
