@@ -1,6 +1,5 @@
 import * as dotenv from "dotenv";
 dotenv.config();
-
 import { defineConfig } from "astro/config";
 
 // https://astro.build/config
