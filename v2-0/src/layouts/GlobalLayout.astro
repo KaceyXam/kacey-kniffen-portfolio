@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
+import { Progress } from "../components/Progress";
 import "../styles/global.scss";
 interface Props {
 	title: string;
@@ -28,6 +29,7 @@ const { title } = Astro.props;
 		></script>
 	</head>
 	<body>
+		<Progress client:only />
 		<Navbar />
 		<slot />
 		<Footer />
