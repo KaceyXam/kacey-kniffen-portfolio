@@ -4,6 +4,7 @@ import "./Progress.scss";
 
 export function Progress() {
 	const [scrollPos, setScrollPos] = createSignal(0);
+	const scrollPercent = createMemo(() => `${scrollPos()}%`);
 
 	createEffect(() => {
 		window.addEventListener("scroll", () => {
@@ -20,5 +21,7 @@ export function Progress() {
 			}
 		});
 	});
-	return <div class="progress-bar">{scrollPos()}</div>;
+	return (
+		<div class="progress-bar" style={{ "--progress-width": scrollPercent() }} />
+	);
 }

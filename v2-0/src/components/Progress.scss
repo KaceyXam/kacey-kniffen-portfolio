@@ -1,4 +1,7 @@
 .progress-bar {
 	position: fixed;
 	z-index: 999999;
+	background-color: var(--accent-color);
+	height: 0.25rem;
+	width: var(--progress-width, 0);
 }
