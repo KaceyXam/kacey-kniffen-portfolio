@@ -1,9 +1,11 @@
 ---
-import { SolidCounter } from "../components/Counter";
 import GlobalLayout from "../layouts/GlobalLayout.astro";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
-import WaveSvg from "../components/WaveSvg.astro";
+import WaveSvg from "../components/svg/WaveSvg.astro";
+
+import { getCollection } from "astro:content";
+import { Project } from "../components/projects/Project";
+
+const allProjects = await getCollection("projects");
 ---
 
 <GlobalLayout title="My Projects">
@@ -15,7 +17,11 @@ import WaveSvg from "../components/WaveSvg.astro";
 		</p>
 	</header>
 	<WaveSvg />
-	<main></main>
+	<main>
+		<section class="project-wrapper">
+			{allProjects.map((project) => <Project p={project} />)}
+		</section>
+	</main>
 </GlobalLayout>
 
 <style lang="scss">
@@ -30,5 +36,13 @@ import WaveSvg from "../components/WaveSvg.astro";
 		h1 {
 			color: var(--accent-color);
 		}
+	}
+
+	.project-wrapper {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		margin-inline: auto;
+		width: clamp(0px, calc(100% - 2rem), 75rem);
+		gap: 3em;
 	}
 </style>
