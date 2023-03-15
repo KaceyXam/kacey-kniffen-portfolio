@@ -1,0 +1,30 @@
+---
+import { CollectionEntry, getCollection } from "astro:content";
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+
+export async function getStaticPaths() {
+	const projects = await getCollection("projects");
+	return projects.map((project) => ({
+		params: { slug: project.slug },
+		props: project,
+	}));
+}
+
+const { data, render, id } = Astro.props;
+const { Content } = await render();
+---
+
+<GlobalLayout title={data.title}>
+	<h1>{data.title}</h1>
+	<img src={data.thumbnail} alt={data.title} />
+	<section>
+		<Content />
+	</section>
+</GlobalLayout>
+
+<style lang="scss">
+	section {
+		max-width: 900px;
+		margin-inline: auto;
+	}
+</style>
