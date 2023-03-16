@@ -6,7 +6,7 @@ thumbnail: "https://raw.githubusercontent.com/KaceyXam/solidjs-fireshipio-recrea
 
 ## This is my recreation of the [Fireship.io](https://fireship.io) homepage using Solid Js.
 
-[Fireship](https://www.youtube.com/@Fireship) is a programming YouTuber who mainy focuses on Web Development content. He makes fast paced tutorials on his channel with more in-depth paid courses on his site, [Fireship.io](https://fireship.io).
+[Fireship](https://www.youtube.com/@Fireship) is a programming YouTuber who mainy focuses on Web Development content. He makes fast paced tutorials on his channel with more in-depth paid courses on his site, Fireship.io.
 
 [Solid.js](https://www.solidjs.com/) is a modern web framework similar to React. Unlike React, Solid has no virtual DOM, meaning when the state of your app changes, the only DOM elements that update are the ones dependant on the changed state.
 
