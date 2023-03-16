@@ -4,7 +4,9 @@ const projectCollection = defineCollection({
 	schema: z.object({
 		title: z.string(),
 		url: z.string(),
+		ghLink: z.string(),
 		thumbnail: z.string(),
+		date: z.date(),
 	}),
 });
 

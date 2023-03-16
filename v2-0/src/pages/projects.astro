@@ -6,6 +6,10 @@ import { getCollection } from "astro:content";
 import { Project } from "../components/projects/Project";
 
 const allProjects = await getCollection("projects");
+
+const sortedProjects = allProjects.sort(
+	(a: any, b: any) => b.data.date - a.data.date
+);
 ---
 
 <GlobalLayout title="My Projects">
@@ -19,7 +23,7 @@ const allProjects = await getCollection("projects");
 	<WaveSvg />
 	<main>
 		<section class="project-wrapper">
-			{allProjects.map((project) => <Project p={project} />)}
+			{sortedProjects.map((project) => <Project p={project} />)}
 		</section>
 	</main>
 </GlobalLayout>
