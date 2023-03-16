@@ -15,16 +15,36 @@ const { Content } = await render();
 ---
 
 <GlobalLayout title={data.title}>
-	<h1>{data.title}</h1>
-	<img src={data.thumbnail} alt={data.title} />
-	<section>
+	<section class="project-about">
+		<h1>{data.title}</h1>
+		<img src={data.thumbnail} alt={data.title} />
 		<Content />
+		<a href="/projects">Back to projects</a>
 	</section>
 </GlobalLayout>
 
-<style lang="scss">
-	section {
+<style lang="scss" is:global>
+	.project-about {
 		max-width: 900px;
 		margin-inline: auto;
+		margin-bottom: 4rem;
+		h1 {
+			text-align: center;
+		}
+		img {
+			margin-block: 2rem 4rem;
+		}
+		h2 {
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 1em;
+		}
+		p {
+			font-size: 1.25rem;
+			line-height: 1.5em;
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
 	}
 </style>
