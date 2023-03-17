@@ -10,7 +10,12 @@ export function Project(props: { p: CollectionEntry<"projects"> }) {
 				<a href={`/projects/${props.p.slug}`}>
 					<h2>{props.p.data.title}</h2>
 				</a>
-				<a href={props.p.data.ghLink} target="_blank" rel="noreferrer">
+				<a
+					href={props.p.data.ghLink}
+					class="gh-link"
+					target="_blank"
+					rel="noreferrer"
+				>
 					<svg
 						viewBox="0 0 98 96"
 						width="98"
