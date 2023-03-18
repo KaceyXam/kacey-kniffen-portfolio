@@ -53,3 +53,20 @@
 		background-color: var(--accent-color-dark);
 	}
 }
+
+@media (max-width: 900px) {
+	.form-wrapper {
+		padding: 1.5em 1em;
+
+		h2 {
+			font-size: 2.5rem;
+		}
+	}
+
+	.form {
+		grid-template-columns: 1fr;
+		button[type="submit"] {
+			grid-column: 1;
+		}
+	}
+}
