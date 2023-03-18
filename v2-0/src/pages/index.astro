@@ -118,6 +118,25 @@ import ProgrammingImage from "../images/home/optimized-unsplash-programming-flor
 		}
 	}
 
+	@media (max-width: 900px) {
+		.about-section {
+			gap: 6rem;
+
+			.about-item {
+				width: 100%;
+				grid-template-columns: 1fr;
+				p {
+					grid-column: 1;
+					grid-row: 1;
+				}
+				img {
+					grid-column: 1;
+					grid-row: 2;
+				}
+			}
+		}
+	}
+
 	@media (prefers-reduced-motion: no-preference) {
 		:where(.hidden) {
 			opacity: 0;
