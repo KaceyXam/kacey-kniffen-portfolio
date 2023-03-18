@@ -1,12 +1,12 @@
 ---
-title: "Noveliss Site Recreation"
+title: "Noveliss Site Redesign"
 url: "https://noveliss-redux.vercel.app"
 ghLink: "https://github.com/KaceyXam/noveliss-redux"
 thumbnail: "https://raw.githubusercontent.com/KaceyXam/noveliss-redux/main/noveliss-recreation.jpg"
 date: 2023-01-06
 ---
 
-## My Recreation of [Noveliss' Website](https://www.noveliss.com)
+## My Redesign of [Noveliss' Website](https://www.noveliss.com)
 
 ### Who is Noveliss
 
