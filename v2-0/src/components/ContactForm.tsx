@@ -1,9 +1,22 @@
+import { createEffect, createResource, createSignal } from "solid-js";
 import "./ContactForm.scss";
 
+async function postFormData(formData: FormData) {
+	const response = await fetch("/api/emailform", {
+		method: "POST",
+		body: formData,
+	});
+	const data = await response.json();
+	return data;
+}
+
 export function ContactForm() {
+	const [formData, setFormData] = createSignal<FormData>();
+	const [response] = createResource(formData, postFormData);
+
 	const onSubmitFunc = (e: SubmitEvent) => {
 		e.preventDefault();
-		alert("Make sure you add this functionality later, Kacey!");
+		setFormData(new FormData(e.target as HTMLFormElement));
 	};
 
 	return (
