@@ -122,7 +122,13 @@ import technologySvg from "../images/technology-svg.svg";
 		}
 	}
 
-	@media (max-width: 900px) {
+	@media (max-width: 1300px) {
+		header {
+			gap: 4em;
+		}
+	}
+
+	@media (max-width: 1000px) {
 		header {
 			flex-direction: column-reverse;
 			width: 100%;
@@ -130,8 +136,21 @@ import technologySvg from "../images/technology-svg.svg";
 			padding-inline: 1em;
 		}
 
+		.header-content {
+			text-align: center;
+			:is(h1, p, a) {
+				width: 100%;
+			}
+		}
+	}
+
+	@media (max-width: 900px) {
 		.rotate-wrapper {
 			width: 80%;
+			max-width: 400px;
+			&:hover {
+				scale: 1;
+			}
 		}
 
 		.img-wrapper {
