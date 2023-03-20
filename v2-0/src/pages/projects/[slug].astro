@@ -22,7 +22,8 @@ const { Content } = await render();
 		<h1>{data.title}</h1>
 	</div>
 	<WaveSvg />
-	<section class="project-about">
+
+	<article class="project-about">
 		<img src={data.thumbnail} alt={data.title} />
 		<a class="gh-link" href={data.ghLink} target="_blank" rel="noreferrer">
 			View on GitHub
@@ -32,7 +33,7 @@ const { Content } = await render();
 		<a href="/projects">
 			<i class="fa-solid fa-arrow-left"></i> Back to projects
 		</a>
-	</section>
+	</article>
 </GlobalLayout>
 
 <style lang="scss" is:global>
