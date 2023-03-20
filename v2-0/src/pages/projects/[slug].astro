@@ -2,6 +2,7 @@
 export const prerender = true;
 
 import { CollectionEntry, getCollection } from "astro:content";
+import WaveSvg from "../../components/svg/WaveSvg.astro";
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
 
 export async function getStaticPaths() {
@@ -17,8 +18,11 @@ const { Content } = await render();
 ---
 
 <GlobalLayout title={data.title}>
-	<section class="project-about">
+	<div class="project-header">
 		<h1>{data.title}</h1>
+	</div>
+	<WaveSvg />
+	<section class="project-about">
 		<img src={data.thumbnail} alt={data.title} />
 		<a class="gh-link" href={data.ghLink} target="_blank" rel="noreferrer">
 			View on GitHub
@@ -32,15 +36,17 @@ const { Content } = await render();
 </GlobalLayout>
 
 <style lang="scss" is:global>
+	.project-header {
+		background: var(--header-gradient);
+		padding-block: 4rem 2rem;
+		h1 {
+			text-align: center;
+		}
+	}
 	.project-about {
 		width: min(calc(100% - 2rem), 900px);
 		margin-inline: auto;
 		margin-bottom: 4rem;
-		h1 {
-			text-align: center;
-			margin-top: 4rem;
-			color: var(--accent-color);
-		}
 		img {
 			margin-block: 2rem;
 			border-radius: 0.75em;
