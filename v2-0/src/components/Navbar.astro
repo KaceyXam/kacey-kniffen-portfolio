@@ -3,6 +3,7 @@ const pathname = new URL(Astro.request.url).pathname;
 
 import KaceyKniffenSvg from "../images/svg/KaceyKniffenLogo.astro";
 import GitHubSvg from "../images/svg/GitHubSvg.astro";
+import { Progress } from "./Progress";
 ---
 
 <nav>
@@ -26,6 +27,7 @@ import GitHubSvg from "../images/svg/GitHubSvg.astro";
 
 <style lang="scss">
 	nav {
+		grid-area: "navbar";
 		display: flex;
 		width: 100%;
 		justify-content: space-between;

@@ -15,11 +15,11 @@ const sortedProjects = allProjects.sort(
 
 <GlobalLayout title="My Projects">
 	<PageHeader title="Projects" />
-	<p class="sub-heading">
-		This is a list of some of the projects I have done. Click on any project to
-		learn more about it.
-	</p>
 	<main>
+		<p class="sub-heading">
+			This is a list of some of the projects I have done. Click on any project
+			to learn more about it.
+		</p>
 		<section class="use-what">
 			<h2>What I Use</h2>
 			<ul>
@@ -45,19 +45,6 @@ const sortedProjects = allProjects.sort(
 </GlobalLayout>
 
 <style lang="scss">
-	header {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 2em;
-		padding-block: 5rem 2rem;
-		text-align: center;
-		background: var(--header-gradient);
-		h1 {
-			color: var(--accent-color);
-		}
-	}
-
 	.use-what {
 		max-width: 45rem;
 		width: calc(100% - 2rem);
@@ -77,6 +64,7 @@ const sortedProjects = allProjects.sort(
 	}
 
 	main {
+		margin-bottom: 6rem;
 		margin-top: 0;
 	}
 

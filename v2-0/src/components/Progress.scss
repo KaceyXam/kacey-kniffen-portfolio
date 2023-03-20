@@ -1,4 +1,5 @@
 .progress-bar {
+	grid-area: "scroller";
 	position: fixed;
 	z-index: 999999;
 	background-color: var(--accent-color);
