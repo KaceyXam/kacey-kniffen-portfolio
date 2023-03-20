@@ -1,0 +1,68 @@
+---
+import LinkedInLogo from "../images/logos/LI-In-Bug.png";
+---
+
+<section class="find-me-section">
+	<h2>Where to Find Me</h2>
+	<ul class="social-links">
+		<li>
+			<a
+				target="_blank"
+				rel="noreferrer"
+				href="https://www.linkedin.com/in/kacey-kniffen/"
+			>
+				<img src={LinkedInLogo} alt="Linkedin Logo" />
+				Linkedin
+			</a>
+		</li>
+		<li><a href="https://www.linkedin.com/in/kacey-kniffen/">Linkedin</a></li>
+		<li><a href="https://www.linkedin.com/in/kacey-kniffen/">Linkedin</a></li>
+	</ul>
+</section>
+
+<style lang="scss">
+	.find-me-section {
+		width: clamp(0px, calc(100% - 2rem), 60rem);
+		margin-inline: auto;
+		padding: 2.5em 3.75em;
+		border-radius: 1.5em;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1.5em;
+		background-color: var(--bg-dark-color);
+		box-shadow: 0 10px 10px #0003;
+		h2 {
+			font-size: 3rem;
+			font-weight: bold;
+		}
+	}
+
+	.social-links {
+		list-style: none;
+		display: grid;
+		gap: 2em;
+		grid-template-columns: repeat(3, 1fr);
+		li {
+			a {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				max-width: 4rem;
+				gap: 0.5em;
+				img {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	@media (max-width: 900px) {
+		.find-me-section {
+			padding: 1.5em 1em;
+			h2 {
+				font-size: 2rem;
+			}
+		}
+	}
+</style>

@@ -70,7 +70,14 @@ h1 {
 }
 
 a {
+	cursor: pointer;
 	color: var(--accent-color);
+	&:hover,
+	&:focus-visible {
+		border-radius: 0.25em;
+		outline: var(--accent-color) 1px solid;
+		outline-offset: 4px;
+	}
 }
 
 .sub-heading {
