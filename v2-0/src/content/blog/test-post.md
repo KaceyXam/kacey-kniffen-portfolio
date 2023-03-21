@@ -2,6 +2,7 @@
 title: "Test Blog Post"
 date: 2023-03-20
 thumbnail: "https://raw.githubusercontent.com/KaceyXam/solidjs-fireshipio-recreation/main/fireshipio-recreation-image.png"
+draft: true
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta lorem mollis aliquam ut porttitor leo. Arcu dui vivamus arcu felis. Velit sed ullamcorper morbi tincidunt ornare massa eget. Vel fringilla est ullamcorper eget. Magna fermentum iaculis eu non diam phasellus. Feugiat in ante metus dictum at. Ac tincidunt vitae semper quis lectus nulla. Praesent tristique magna sit amet purus. Sed adipiscing diam donec adipiscing tristique risus nec. Pretium nibh ipsum consequat nisl vel pretium lectus quam. Bibendum ut tristique et egestas quis. Ridiculus mus mauris vitae ultricies leo. In nisl nisi scelerisque eu ultrices vitae auctor. Mauris pharetra et ultrices neque ornare aenean euismod. Viverra adipiscing at in tellus.
