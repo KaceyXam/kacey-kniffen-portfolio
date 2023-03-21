@@ -2,7 +2,7 @@
 title: "Fireship.io Site Recreation"
 url: "https://solidjs-fireshipio-recreation.pages.dev/"
 ghLink: "https://github.com/KaceyXam/solidjs-fireshipio-recreation"
-thumbnail: "https://raw.githubusercontent.com/KaceyXam/solidjs-fireshipio-recreation/main/fireshipio-recreation-image.png"
+thumbnail: "/assets/project-imgs/fireshipio-recreation-image.jpg"
 date: 2023-01-20
 ---
 
