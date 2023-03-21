@@ -26,6 +26,7 @@
 	a {
 		color: inherit;
 		text-decoration: none;
+		outline-color: transparent;
 		* {
 			--transition-time: 75ms;
 			transition: color var(--transition-time) ease-in-out,
