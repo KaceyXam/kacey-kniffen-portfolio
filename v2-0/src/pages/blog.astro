@@ -1,15 +1,68 @@
 ---
+import { getCollection } from "astro:content";
 import PageHeader from "../components/PageHeader.astro";
 import GlobalLayout from "../layouts/GlobalLayout.astro";
+
+const allPosts = await getCollection("blog");
+
+const sortedPosts = allPosts.sort(
+	(a: any, b: any) => b.data.date - a.data.date
+);
 ---
 
 <GlobalLayout title="My Blog">
 	<PageHeader title="My Blog" />
-
 	<main>
 		<p class="sub-heading">
 			This is my blog that I built using Astro and Solid Js. I will be writing a
 			new blog post every week about what I have been working on.
 		</p>
+		<section class="post-list">
+			{
+				sortedPosts.map((post) => (
+					<a href={`/blog/${post.slug}`} class="post-link">
+						<p class="post-date">{post.data.date.toDateString()}</p>
+						{post.data.thumbnail && <img src={post.data.thumbnail} />}
+						<h3>{post.data.title}</h3>
+					</a>
+				))
+			}
+		</section>
 	</main>
 </GlobalLayout>
+
+<style lang="scss">
+	.post-list {
+		width: min(calc(100% - 2rem), 60rem);
+		margin-inline: auto;
+	}
+
+	.post-link {
+		color: inherit;
+		text-decoration: none;
+		padding: 1em;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		border-radius: 1em;
+		background: var(--bg-dark-color);
+		transition: scale 125ms ease-in-out;
+		&:hover,
+		&:focus-visible {
+			outline-offset: 0;
+			scale: 1.025;
+			box-shadow: 0 0 25px -10px rgba(255, 255, 255, 0.25);
+		}
+		h3 {
+			font-size: 2rem;
+			text-align: center;
+			padding-block: 0.5em 1.5em;
+		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.post-link {
+			transition-timing-function: cubic-bezier(0.17, 0.67, 0.81, 1.59);
+		}
+	}
+</style>
