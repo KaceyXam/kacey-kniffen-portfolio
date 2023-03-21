@@ -22,7 +22,7 @@ const sortedPosts = allPosts.sort(
 				sortedPosts.map((post) => (
 					<a href={`/blog/${post.slug}`} class="post-link">
 						<p class="post-date">{post.data.date.toDateString()}</p>
-						{post.data.thumbnail && <img src={post.data.thumbnail} />}
+						<img src={post.data.thumbnail} />
 						<h3>{post.data.title}</h3>
 					</a>
 				))
@@ -35,6 +35,8 @@ const sortedPosts = allPosts.sort(
 	.post-list {
 		width: min(calc(100% - 2rem), 60rem);
 		margin-inline: auto;
+		display: grid;
+		gap: 4em;
 	}
 
 	.post-link {
@@ -47,14 +49,17 @@ const sortedPosts = allPosts.sort(
 		border-radius: 1em;
 		background: var(--bg-dark-color);
 		transition: scale 125ms ease-in-out;
-		&:hover,
-		&:focus-visible {
-			outline-offset: 0;
+		&:hover {
 			scale: 1.025;
 			box-shadow: 0 0 25px -10px rgba(255, 255, 255, 0.25);
 		}
+		&:hover,
+		&:focus-visible {
+			outline-offset: 0;
+		}
 		h3 {
 			font-size: 2rem;
+			font-weight: 700;
 			text-align: center;
 			padding-block: 0.5em 1.5em;
 		}

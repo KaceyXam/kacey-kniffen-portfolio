@@ -18,13 +18,7 @@ const { Content } = await render();
 ---
 
 <GlobalLayout title={data.title}>
-	{
-		data.thumbnail ? (
-			<img class="bg-img" src={data.thumbnail} />
-            ) : (
-			<div class="bg-img bg-gradient" />
-		)
-	}
+	<img class="bg-img" src={data.thumbnail} />
 	<section class="content">
 		<div class="title-text">
 			<div>{data.date.toDateString()}</div>
@@ -71,6 +65,7 @@ const { Content } = await render();
 		max-width: 60rem;
 		width: calc(100% - 4rem);
 		margin-bottom: 2rem;
+		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 	}
 
 	.title-text {
