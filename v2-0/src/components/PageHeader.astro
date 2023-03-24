@@ -1,0 +1,23 @@
+---
+import WaveSvg from "./svg/WaveSvg.astro";
+
+let { title } = Astro.props;
+---
+
+<header>
+	<h1>{title}</h1>
+</header>
+<WaveSvg />
+
+<style lang="scss">
+	header {
+		grid-area: "header";
+		text-align: center;
+		padding-block: 5rem 2rem;
+		text-align: center;
+		background: var(--header-gradient);
+		h1 {
+			color: var(--accent-color);
+		}
+	}
+</style>

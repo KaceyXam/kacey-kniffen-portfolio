@@ -1,0 +1,182 @@
+---
+import WaveSvg from "../components/svg/WaveSvg.astro";
+import kaceyProfessionalImg from "../images/kacey-professional.png";
+import technologySvg from "../images/technology-svg.svg";
+---
+
+<header>
+	<section class="header-content">
+		<h1>Kacey Kniffen</h1>
+		<p>
+			I’m a self-taught Freelance Web Developer who enjoys building websites and
+			experimenting with modern languages and frameworks, such as Solid Js and
+			Astro, which I used to build this site.
+		</p>
+		<a href="/projects">
+			View my projects
+			<i class="fa-solid fa-arrow-up-right-from-square"></i>
+		</a>
+	</section>
+	<div class="rotate-wrapper">
+		<img class="rotate-svg" src={technologySvg} alt="" />
+		<div class="img-wrapper">
+			<div class="circle-border"></div>
+			<img
+				src={kaceyProfessionalImg}
+				alt="Kacey Kniffen with his Graduation Cap"
+			/>
+		</div>
+	</div>
+</header>
+
+<WaveSvg />
+
+<style lang="scss" scoped>
+	.header-content {
+		grid-area: "header";
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.5em;
+		h1 {
+			color: var(--accent-color);
+		}
+
+		p {
+			max-width: 55ch;
+			font-size: 18px;
+			line-height: 1.5;
+		}
+
+		a {
+			color: var(--accent-color);
+			text-decoration: none;
+			font-size: 20px;
+		}
+	}
+
+	header {
+		display: flex;
+		gap: 10rem;
+		align-items: center;
+		justify-content: center;
+		padding-block: 6em;
+		background: var(--header-gradient);
+	}
+
+	.rotate-wrapper {
+		&,
+		& * {
+			transition: all 125ms ease-in-out;
+		}
+		position: relative;
+		&:hover {
+			scale: 1.1;
+			.img-wrapper img {
+				scale: 1.2;
+				bottom: 0.75rem;
+			}
+		}
+	}
+
+	.rotate-svg {
+		width: 100%;
+		scale: 1.17;
+		position: absolute;
+		bottom: 0;
+		inset-inline: 0;
+	}
+
+	.img-wrapper {
+		position: relative;
+		aspect-ratio: 1 / 1.125;
+		width: 500px;
+		border-radius: 0 0 999vmax 999vmax;
+		overflow: hidden;
+		* {
+			bottom: 0;
+		}
+		.circle-border {
+			position: absolute;
+			width: 100%;
+			border-radius: 999vmax;
+			background-color: var(--accent-color-transparent);
+			aspect-ratio: 1 / 1;
+		}
+		img {
+			bottom: -25px;
+			position: absolute;
+			width: 80%;
+			left: 50%;
+			translate: -50%;
+			transition: 175ms ease-in-out;
+		}
+	}
+
+	@media (prefers-reduced-motion: no-preference) {
+		.rotate-svg {
+			animation: rotation 160s linear infinite;
+		}
+
+		.rotate-wrapper:hover {
+			animation: bob 5s infinite ease-in-out;
+		}
+	}
+
+	@media (max-width: 1300px) {
+		header {
+			gap: 4em;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		header {
+			flex-direction: column-reverse;
+			width: 100%;
+			gap: 2em;
+			padding-inline: 1em;
+		}
+
+		.header-content {
+			text-align: center;
+			:is(h1, p, a) {
+				width: 100%;
+			}
+		}
+	}
+
+	@media (max-width: 900px) {
+		.rotate-wrapper {
+			width: 80%;
+			max-width: 400px;
+			&:hover {
+				scale: 1;
+			}
+		}
+
+		.img-wrapper {
+			width: 100%;
+		}
+	}
+
+	@keyframes rotation {
+		0% {
+			rotate: 0deg;
+		}
+		100% {
+			rotate: 360deg;
+		}
+	}
+
+	@keyframes bob {
+		0% {
+			translate: 0 0rem;
+		}
+		50% {
+			translate: 0 -1rem;
+		}
+		100% {
+			translate: 0 0rem;
+		}
+	}
+</style>

@@ -1,0 +1,78 @@
+---
+import GlobalLayout from "../layouts/GlobalLayout.astro";
+import WaveSvg from "../components/svg/WaveSvg.astro";
+
+import { getCollection } from "astro:content";
+import { Project } from "../components/projects/Project";
+import PageHeader from "../components/PageHeader.astro";
+
+const allProjects = await getCollection("projects");
+
+const sortedProjects = allProjects.sort(
+	(a: any, b: any) => b.data.date - a.data.date
+);
+---
+
+<GlobalLayout title="My Projects">
+	<PageHeader title="Projects" />
+	<main>
+		<p class="sub-heading">
+			This is a list of some of the projects I have done. Click on any project
+			to learn more about it.
+		</p>
+		<section class="use-what">
+			<h2>What I Use</h2>
+			<ul>
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+				<li>TypeScript</li>
+				<li>Scss/Sass</li>
+				<li>Rust</li>
+				<li>React Js</li>
+				<li>Next Js</li>
+				<li>Vue</li>
+				<li>Astro</li>
+				<li>Svelte</li>
+				<li>Solid Js</li>
+				<li>Tailwind</li>
+			</ul>
+		</section>
+		<section class="project-wrapper">
+			{sortedProjects.map((project) => <Project p={project} />)}
+		</section>
+	</main>
+</GlobalLayout>
+
+<style lang="scss">
+	.use-what {
+		max-width: 45rem;
+		width: calc(100% - 2rem);
+		margin-inline: auto;
+		margin-block: 0 6rem;
+		h2 {
+			text-align: center;
+			font-size: 2.5em;
+			font-weight: 700;
+			margin-bottom: 1rem;
+		}
+		ul {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			list-style: none;
+		}
+	}
+
+	main {
+		margin-bottom: 6rem;
+		margin-top: 0;
+	}
+
+	.project-wrapper {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		margin-inline: auto;
+		width: clamp(0px, calc(100% - 2rem), 75rem);
+		gap: 3em;
+	}
+</style>

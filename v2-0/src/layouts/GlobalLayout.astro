@@ -1,0 +1,43 @@
+---
+import Footer from "../components/Footer.astro";
+import Navbar from "../components/Navbar.astro";
+import { Progress } from "../components/Progress";
+import "../styles/global.scss";
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Ubuntu:wght@400;500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Kacey Kniffen | {title}</title>
+		<script
+			src="https://kit.fontawesome.com/41b5a2e295.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<Progress client:only />
+		<Navbar />
+		<slot />
+		<Footer />
+	</body>
+</html>
+
+<style lang="scss" is:global>
+	main {
+		margin-block: 2rem;
+	}
+</style>

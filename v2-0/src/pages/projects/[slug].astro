@@ -1,0 +1,83 @@
+---
+export const prerender = true;
+
+import { CollectionEntry, getCollection } from "astro:content";
+import WaveSvg from "../../components/svg/WaveSvg.astro";
+import GlobalLayout from "../../layouts/GlobalLayout.astro";
+
+export async function getStaticPaths() {
+	const projects = await getCollection("projects");
+	return projects.map((project) => ({
+		params: { slug: project.slug },
+		props: project,
+	}));
+}
+
+const { data, render, id } = Astro.props;
+const { Content } = await render();
+---
+
+<GlobalLayout title={data.title}>
+	<div class="project-header">
+		<h1>{data.title}</h1>
+	</div>
+	<WaveSvg />
+
+	<article class="project-about">
+		<img src={data.thumbnail} alt={data.title} />
+		<a class="gh-link" href={data.ghLink} target="_blank" rel="noreferrer">
+			View on GitHub
+		</a>
+		<Content />
+
+		<a href="/projects">
+			<i class="fa-solid fa-arrow-left"></i> Back to projects
+		</a>
+	</article>
+</GlobalLayout>
+
+<style lang="scss" is:global>
+	.project-header {
+		background: var(--header-gradient);
+		padding-block: 4rem 2rem;
+		h1 {
+			text-align: center;
+		}
+	}
+	.project-about {
+		width: min(calc(100% - 2rem), 900px);
+		margin-inline: auto;
+		margin-bottom: 4rem;
+		img {
+			margin-block: 2rem;
+			border-radius: 0.75em;
+			width: 100%;
+			object-fit: cover;
+		}
+		h2 {
+			font-size: 2rem;
+			font-weight: 700;
+			margin-bottom: 1em;
+		}
+		h3 {
+			font-size: 1.5rem;
+			font-weight: 700;
+			margin-bottom: 0.5em;
+		}
+		p {
+			font-size: 1.25rem;
+			line-height: 1.5em;
+			&:not(:last-child) {
+				margin-bottom: 1em;
+			}
+		}
+		a {
+			outline-color: transparent;
+		}
+		.gh-link {
+			display: block;
+			text-align: center;
+			margin-bottom: 2rem;
+		}
+	}
+</style>
