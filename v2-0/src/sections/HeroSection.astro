@@ -31,7 +31,7 @@ import technologySvg from "../images/technology-svg.svg";
 
 <WaveSvg />
 
-<style lang="scss" scoped>
+<style lang="scss">
 	.header-content {
 		grid-area: "header";
 		display: flex;
@@ -120,6 +120,12 @@ import technologySvg from "../images/technology-svg.svg";
 
 		.rotate-wrapper:hover {
 			animation: bob 5s infinite ease-in-out;
+		}
+	}
+
+	@media (orientation: portrait) {
+		.rotate-svg {
+			animation: none;
 		}
 	}
 

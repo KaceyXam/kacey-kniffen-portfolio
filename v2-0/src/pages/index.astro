@@ -23,14 +23,12 @@ import FindMe from "../components/FindMe.astro";
 					eComm, I focused on furthering my passion in web design.
 				</p>
 				<img
-					loading="lazy"
 					src={KaceyGraduation}
 					alt="Kacey Kniffen and his parents at his graduation"
 				/>
 			</div>
 			<div class="about-item hidden right">
 				<img
-					loading="lazy"
 					src={KaceyInPlay}
 					alt="Kacey Kniffen in his high school rendition of Murder on the Orient Express"
 				/>
@@ -47,7 +45,6 @@ import FindMe from "../components/FindMe.astro";
 					because I like seeing where Web Development is going.
 				</p>
 				<img
-					loading="lazy"
 					src={ProgrammingImage}
 					alt="Programming stock photo from unsplash, Florian Olivo"
 				/>
@@ -67,7 +64,7 @@ import FindMe from "../components/FindMe.astro";
 			});
 		},
 		{
-			threshold: 0.5,
+			threshold: 0.25,
 		}
 	);
 
@@ -80,6 +77,7 @@ import FindMe from "../components/FindMe.astro";
 		display: grid;
 		gap: 10rem;
 		margin-block: 6rem;
+		overflow: hidden;
 	}
 
 	.about-section {
@@ -146,7 +144,7 @@ import FindMe from "../components/FindMe.astro";
 		:where(.hidden) {
 			opacity: 0;
 			translate: -50% 0;
-			transition: opacity 1.5s ease-in-out, translate 750ms ease-in-out;
+			transition: opacity 750ms ease-in-out, translate 750ms ease-in-out;
 			&.right {
 				translate: 50% 0;
 			}
