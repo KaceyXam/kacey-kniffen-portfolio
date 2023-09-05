@@ -10,14 +10,14 @@
 		"astro": "astro"
 	},
 	"dependencies": {
-		"@astrojs/mdx": "^0.18.2",
-		"@astrojs/solid-js": "^2.1.0",
-		"@babel/core": "^7.21.3",
-		"astro": "^2.1.5",
-		"dotenv": "^16.0.3",
-		"solid-js": "^1.6.15"
+		"@astrojs/mdx": "^0.18.4",
+		"@astrojs/solid-js": "^2.2.1",
+		"@babel/core": "^7.22.15",
+		"astro": "^3.0.8",
+		"dotenv": "^16.3.1",
+		"solid-js": "^1.7.11"
 	},
 	"devDependencies": {
-		"sass": "^1.60.0"
+		"sass": "^1.66.1"
 	}
 }
