@@ -2,6 +2,7 @@
 title: "Designing Chat Universe"
 date: 2023-04-08
 thumbnail: "/assets/blog-imgs/chat-universe-desktop.jpg"
+draft: true
 ---
 
 Over the past week, I have been working on my web design skills. I think my development skills are fairly good, but I have a hard time using figma and designing a site that looks good. The site I decided to design is called Chat Universe.

@@ -1,7 +1,7 @@
 ---
 export const prerender = true;
 
-import { CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
 import WaveSvg from "../../components/svg/WaveSvg.astro";
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
 
@@ -45,8 +45,9 @@ const { Content } = await render();
 	}
 
 	.bg-img:is(img) {
-		max-width: 90rem;
+		max-width: 60rem;
 		width: 100%;
+		border-radius: 1rem;
 	}
 
 	.bg-img:is(.bg-gradient) {
@@ -61,14 +62,14 @@ const { Content } = await render();
 	}
 
 	.content {
-		background-color: var(--bg-color);
+		// background-color: var(--bg-color);
 		border-radius: 0.75em 0.75em 0 0;
 		padding: 1em;
 		margin-inline: auto;
 		max-width: 60rem;
 		width: calc(100% - 4rem);
 		margin-bottom: 2rem;
-		box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+		// box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 	}
 
 	@media screen and (max-width: 800px) {
@@ -91,18 +92,18 @@ const { Content } = await render();
 		font-size: 18px;
 		line-height: 2em !important;
 		p {
-			text-indent: 1em;
+			// text-indent: 1em;
 			margin-bottom: 1em;
 		}
 		h2 {
-			font-size: 3em;
+			font-size: 4em;
 			font-weight: 700;
 			margin-bottom: 1.25em;
 		}
 		h3 {
-			font-size: 1.5em;
+			font-size: 2em;
 			font-weight: 700;
-			margin-bottom: 1em;
+			margin-block: 1em;
 		}
 	}
 </style>

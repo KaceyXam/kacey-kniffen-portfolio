@@ -3,7 +3,9 @@ import { getCollection } from "astro:content";
 import PageHeader from "../components/PageHeader.astro";
 import GlobalLayout from "../layouts/GlobalLayout.astro";
 
-const allPosts = await getCollection("blog");
+const allPosts = await getCollection("blog", ({ data }) => {
+	return import.meta.env.PROD ? data.draft !== true : true;
+});
 
 const sortedPosts = allPosts.sort(
 	(a: any, b: any) => b.data.date - a.data.date
@@ -13,17 +15,19 @@ const sortedPosts = allPosts.sort(
 <GlobalLayout title="My Blog">
 	<PageHeader title="My Blog" />
 	<main>
-		<p class="sub-heading">
+		<!-- <p class="sub-heading">
 			This is my blog that I built using Astro and Solid Js. I will be writing a
 			new blog post every week about what I have been working on.
-		</p>
+		</p> -->
 		<section class="post-list">
 			{
 				sortedPosts.map((post) => (
 					<a href={`/blog/${post.slug}`} class="post-link">
-						<p class="post-date">{post.data.date.toDateString()}</p>
 						<img src={post.data.thumbnail} />
-						<h3>{post.data.title}</h3>
+						<div class="inner-content">
+							<p class="post-date">{post.data.date.toDateString()}</p>
+							<h3>{post.data.title}</h3>
+						</div>
 					</a>
 				))
 			}
@@ -44,11 +48,14 @@ const sortedPosts = allPosts.sort(
 		text-decoration: none;
 		padding: 1em;
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		gap: 1em;
 		border-radius: 1em;
-		background: var(--bg-dark-color);
+		background: var(--bg-color);
 		transition: scale 125ms ease-in-out;
+		img {
+			max-width: 33%;
+		}
 		&:hover {
 			scale: 1.025;
 			box-shadow: 0 0 25px -10px rgba(255, 255, 255, 0.25);
@@ -56,11 +63,13 @@ const sortedPosts = allPosts.sort(
 		&:hover,
 		&:focus-visible {
 			outline-offset: 0;
+			h3 {
+				text-decoration: underline;
+			}
 		}
 		h3 {
 			font-size: 2rem;
 			font-weight: 700;
-			text-align: center;
 			padding-block: 0.5em 1.5em;
 		}
 	}

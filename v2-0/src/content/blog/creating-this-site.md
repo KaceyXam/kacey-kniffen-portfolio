@@ -2,6 +2,7 @@
 title: "Creating this Site"
 date: 2023-03-20
 thumbnail: "/assets/blog-imgs/building-this-blog.jpg"
+draft: false
 ---
 
 Recently, I decided to rebuild my website. I decided to do this because I wasn't completely happy with my previous site. I will probably remake this site in a couple months when I get tired of how this looks. One important thing I decided to add was a blog feature so I can write about what I am doing and what projects I am working on.
