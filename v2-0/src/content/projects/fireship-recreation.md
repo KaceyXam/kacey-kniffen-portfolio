@@ -4,6 +4,7 @@ url: "https://solidjs-fireshipio-recreation.pages.dev/"
 ghLink: "https://github.com/KaceyXam/solidjs-fireshipio-recreation"
 thumbnail: "/assets/project-imgs/fireshipio-recreation-image.jpg"
 date: 2023-01-20
+draft: true
 ---
 
 ## This is my recreation of the [Fireship.io](https://fireship.io) homepage using Solid Js.

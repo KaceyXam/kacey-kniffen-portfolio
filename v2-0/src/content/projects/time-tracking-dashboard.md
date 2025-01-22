@@ -4,6 +4,7 @@ url: "https://clever-kulfi-1f769c.netlify.app/"
 ghLink: "https://github.com/KaceyXam/time-tracking-dashboard"
 date: 2022-12-06
 thumbnail: "/assets/project-imgs/time-tracking-dashboard.jpg"
+draft: true
 ---
 
 ## My [Frontend Mentor](https://www.frontendmentor.io/) solution to the [time tracking dashboard](https://www.frontendmentor.io/challenges/time-tracking-dashboard-UIQ7167Jw) challenge

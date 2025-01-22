@@ -4,6 +4,7 @@ url: "https://noveliss-redux.vercel.app"
 ghLink: "https://github.com/KaceyXam/noveliss-redux"
 thumbnail: "/assets/project-imgs/noveliss-recreation.jpg"
 date: 2023-01-06
+draft: false
 ---
 
 ## My Redesign of [Noveliss' Website](https://www.noveliss.com)

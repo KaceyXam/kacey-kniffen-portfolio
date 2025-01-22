@@ -4,6 +4,7 @@ url: "https://age-calculator-app-8bh.pages.dev/"
 ghLink: "https://github.com/KaceyXam/age-calculator-app"
 thumbnail: "/assets/project-imgs/age-calculator.jpg"
 date: 2023-06-05
+draft: true
 ---
 
 ## Frontend Practice Age Calculator App using Solid JS
@@ -20,27 +21,27 @@ One major problem I had with this project was working with dates. If you look at
 
 ```javascript
 export function calculateAge(
-	birthDay: number,
-	birthMonth: number,
-	birthYear: number
+    birthDay: number,
+    birthMonth: number,
+    birthYear: number
 ) {
-	const current = new Date();
-	console.log(birthDay, birthMonth, birthYear);
-	let newDay = current.getDate() - birthDay;
-	let newMonth = current.getMonth() + 1 - birthMonth;
-	let newYear = current.getFullYear() - birthYear;
-	console.log(newDay, newMonth, newYear);
-	if (newDay < 0) {
-		newDay *= -1;
-		newMonth -= 1;
-	}
-	if (newMonth < 0) {
-		newMonth += 12;
-		newYear -= 1;
-	}
-	setYear(newYear);
-	setMonth(newMonth);
-	setDay(newDay);
+    const current = new Date();
+    console.log(birthDay, birthMonth, birthYear);
+    let newDay = current.getDate() - birthDay;
+    let newMonth = current.getMonth() + 1 - birthMonth;
+    let newYear = current.getFullYear() - birthYear;
+    console.log(newDay, newMonth, newYear);
+    if (newDay < 0) {
+        newDay *= -1;
+        newMonth -= 1;
+    }
+    if (newMonth < 0) {
+        newMonth += 12;
+        newYear -= 1;
+    }
+    setYear(newYear);
+    setMonth(newMonth);
+    setDay(newDay);
 }
 ```
 

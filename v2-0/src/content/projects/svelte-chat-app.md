@@ -4,6 +4,7 @@ url: "https://svelte-chat-app-580d3.firebaseapp.com/"
 ghLink: "https://github.com/KaceyXam/svelte-chat-app"
 date: 2023-01-06
 thumbnail: "/assets/project-imgs/svelte-chat-app.jpg"
+draft: true
 ---
 
 ## My Real-time Chat App built with Svelte and Firebase

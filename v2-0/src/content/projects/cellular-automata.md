@@ -4,6 +4,7 @@ url: "https://kaceyxam.github.io/game_of_life/"
 ghLink: "https://github.com/KaceyXam/game_of_life/"
 thumbnail: "/assets/project-imgs/cellular-automata.jpg"
 date: 2023-05-11
+draft: true
 ---
 
 ## Cellular Automata built with Rust and Bevy
@@ -12,11 +13,11 @@ date: 2023-05-11
 
 [Cellular Automata](https://en.wikipedia.org/wiki/Cellular_automaton) is basically a grid of cells where each cell has a state, in my case cells are either alive or dead. There are specific rules to determine if each cell will say alive or die each game tick. I decided to use the rules for Conway's game of life for this cellular automata. The rules for Conway's game of life are as follows:
 
-- Any live cell with two or three live neighbours survives.
+-   Any live cell with two or three live neighbours survives.
 
-- Any dead cell with three live neighbours becomes a live cell.
+-   Any dead cell with three live neighbours becomes a live cell.
 
-- All other live cells die in the next generation. Similarly, all other dead cells stay dead.
+-   All other live cells die in the next generation. Similarly, all other dead cells stay dead.
 
 The reason I chose Conway's game of life was how simple the rules are. It would be easy to tell if I was doing everything properly.
 

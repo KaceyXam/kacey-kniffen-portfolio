@@ -21,11 +21,11 @@ Astro also comes with some more benifits. The blog posts and the project pages a
 
 ### Why not use something like Wordpress for your blog?
 
-I could have built my blog with Wordpress or hosted my bolg on somewhere like dev.to, but I wanted to build this on my own because I think it's fun.
+I could have built my blog with Wordpress or hosted my blog on somewhere like dev.to, but I wanted to build this on my own because I think it's fun.
 
 ### Why Solid Js
 
-When I started this project, I knew I wouldn't need much JavaScript interactivity, so I decided to use Solid since it's very performant, especially compared to React. I realistically could have handled eveything with something like Alpine js or Petite Vue if I wanted to get very lightweight, but I wanted to have an excuse to use Solid more.
+Since I wasn't going to be using too much JavaScript for reactivity, I decided to use Solid JS over something more battle tested like React or Vue simply because I thought it would be fun to try something new. I easily could have done everything I did in vanilla JS, but I wanted the excuse to try something I hadn;t really used before.
 
 ### Why Sass
 

@@ -4,6 +4,7 @@ url: "https://weather-hub.pages.dev/"
 ghLink: "https://github.com/KaceyXam/weather-hub/"
 thumbnail: "/assets/project-imgs/weather-hub.jpg"
 date: 2023-05-13
+draft: true
 ---
 
 ## Weather hub built with React and Tailwindcss

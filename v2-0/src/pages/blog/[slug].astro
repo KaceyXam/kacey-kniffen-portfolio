@@ -2,15 +2,14 @@
 export const prerender = true;
 
 import { getCollection } from "astro:content";
-import WaveSvg from "../../components/svg/WaveSvg.astro";
 import GlobalLayout from "../../layouts/GlobalLayout.astro";
 
 export async function getStaticPaths() {
-	const blogPosts = await getCollection("blog");
-	return blogPosts.map((blogPost) => ({
-		params: { slug: blogPost.slug },
-		props: blogPost,
-	}));
+    const blogPosts = await getCollection("blog");
+    return blogPosts.map((blogPost) => ({
+        params: { slug: blogPost.slug },
+        props: blogPost,
+    }));
 }
 
 const { data, render, id } = Astro.props;
@@ -18,92 +17,107 @@ const { Content } = await render();
 ---
 
 <GlobalLayout title={data.title}>
-	<img class="bg-img" src={data.thumbnail} />
-	<section class="content">
-		<div class="title-text">
-			<div>{data.date.toDateString()}</div>
-			<h1>{data.title}</h1>
-		</div>
-		<article>
-			<Content />
-			<a href="/blog">
-				<i class="fa-solid fa-arrow-left"></i> Back to blog posts
-			</a>
-		</article>
-	</section>
+    <img class="bg-img" src={data.thumbnail} />
+    <section class="content">
+        <div class="title-text">
+            <h1>{data.title}</h1>
+            <div>{data.date.toDateString()}</div>
+        </div>
+        <article>
+            <Content />
+            <a href="/blog">
+                <i class="fa-solid fa-arrow-left"></i> Back to blog posts
+            </a>
+        </article>
+    </section>
 </GlobalLayout>
 
 <style lang="scss" is:global>
-	main {
-		background-color: var(--bg-dark-color);
-	}
+    main {
+        background-color: var(--bg-dark-color);
+    }
 
-	.bg-img {
-		position: relative;
-		margin-inline: auto;
-		z-index: -1;
-	}
+    .bg-img {
+        position: relative;
+        margin-inline: auto;
+        z-index: -1;
+    }
 
-	.bg-img:is(img) {
-		max-width: 60rem;
-		width: 100%;
-		border-radius: 1rem;
-	}
+    .bg-img:is(img) {
+        max-width: 60rem;
+        width: 100%;
+        border-radius: 1rem;
+    }
 
-	.bg-img:is(.bg-gradient) {
-		min-height: 50vh;
-		width: 100%;
-		background-image: linear-gradient(
-			90deg,
-			rgba(2, 0, 36, 1) 0%,
-			rgba(9, 9, 121, 1) 35%,
-			rgba(0, 212, 255, 1) 100%
-		);
-	}
+    .bg-img:is(.bg-gradient) {
+        min-height: 50vh;
+        width: 100%;
+        background-image: linear-gradient(
+            90deg,
+            rgba(2, 0, 36, 1) 0%,
+            rgba(9, 9, 121, 1) 35%,
+            rgba(0, 212, 255, 1) 100%
+        );
+    }
 
-	.content {
-		// background-color: var(--bg-color);
-		border-radius: 0.75em 0.75em 0 0;
-		padding: 1em;
-		margin-inline: auto;
-		max-width: 60rem;
-		width: calc(100% - 4rem);
-		margin-bottom: 2rem;
-		// box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-	}
+    .content {
+        // background-color: var(--bg-color);
+        border-radius: 0.75em 0.75em 0 0;
+        padding: 1em;
+        margin-inline: auto;
+        max-width: 60rem;
+        width: calc(100% - 4rem);
+        margin-bottom: 2rem;
+        // box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
 
-	@media screen and (max-width: 800px) {
-		.content {
-			width: 100%;
-		}
-	}
+    @media screen and (max-width: 800px) {
+        .content {
+            width: 100%;
+        }
+    }
 
-	.title-text {
-		padding-block: 0.75em 1.5em;
-		border-bottom: var(--accent-color) 2px solid;
-		margin-bottom: 2em;
-		border-radius: 0.25em 0.25em 0 0;
-		text-align: center;
-		z-index: 10;
-		background-color: var(--bg-color);
-	}
+    .title-text {
+        padding-block: 0.75em 1.5em;
+        border-bottom: var(--accent-color) 2px solid;
+        margin-bottom: 2em;
+        border-radius: 0.25em 0.25em 0 0;
+        text-align: center;
+        z-index: 10;
+        // background-color: var(--bg-color);
+        h1 {
+            margin-bottom: 1.5rem;
+        }
+    }
 
-	article {
-		font-size: 18px;
-		line-height: 2em !important;
-		p {
-			// text-indent: 1em;
-			margin-bottom: 1em;
-		}
-		h2 {
-			font-size: 4em;
-			font-weight: 700;
-			margin-bottom: 1.25em;
-		}
-		h3 {
-			font-size: 2em;
-			font-weight: 700;
-			margin-block: 1em;
-		}
-	}
+    article {
+        font-size: 18px;
+        line-height: 2em !important;
+        p {
+            // text-indent: 1em;
+            margin-bottom: 1em;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            margin-block: 1.5rem 2rem;
+        }
+        h1 {
+            font-size: 3rem;
+        }
+        h2 {
+            font-size: 2.5rem;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+        code {
+            font-family: "JetBrains Mono", monospace;
+            line-height: 0.5;
+        }
+    }
 </style>
